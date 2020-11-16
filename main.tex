@@ -1,17 +1,30 @@
 %Jordon Cavazos
 %Notes on "The Higher Infinite" 
 
-
-\documentclass[a4paper, 11pt, oneside]{book} % A4 paper size, default 11pt font size and oneside for equal margins
+\documentclass{article}
+%\documentclass[a4paper, 11pt, oneside]{book} % A4 paper size, default 11pt font size and oneside for equal margins
 
 
 %\usepackage[utf8]{inputenc} % Required for inputting international characters
 %\usepackage[T1]{fontenc} % Output font encoding for international characters
 %\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage{amsthm}
+\usepackage{mathtools}
+\setcounter{section}{-1}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+
 
 \begin{document} 
 
@@ -74,7 +87,7 @@
 	%	Subtitle
 	%------------------------------------------------
 	
-	Notes on Akihiro Kanamori's "The Higher Inifite" % Subtitle or further description
+	Notes on Akihiro Kanamori's \emph{The Higher Inifite} % Subtitle or further description
 	
 	\vspace*{3\baselineskip} % Whitespace under the subtitle
 	
@@ -104,6 +117,38 @@
 
 \end{titlepage}
 
-%----------------------------------------------------------------------------------------
+\section{Preliminaries}
+\begin{definition}
+
+	For $X\subseteq \textrm{On}$, $\gamma$ is a \emph{limit point of $X$} iff $\bigcup (X \cap \gamma) = \gamma > 0$
+\end{definition}
+%\begin{remark}
+	Notice that a limit point is necessarily a limit ordinal: if $\gamma = \alpha +1$ then $\bigcup \gamma = \alpha$ and we have $ \bigcup (X \cap \gamma) \subseteq \bigcup \gamma  = \alpha < \gamma$.
+%\end{remark}
+\begin{definition}
+	$C$ is \emph{closed unbounded in $\delta$} iff $C$ is an unbounded subset of $\delta$ containing all its limit points less than $\delta$. 
+\end{definition}
+These sets are also called \emph{club} sets. Here $C$ is unbounded iff for all $x\in \delta$ there exists $y \in C$ such that $x<y$ (the alternative would have $x\leq y$). This definition of unbounded implies that $\delta$ must be infinite for club sets to exist.
+\begin{definition}
+	For regular $\nu < \delta$, $C$ is \emph{$\nu$-closed unbounded in $\delta$} iff $C$ is an unbounded subset of $\delta$ containing all its limit points less than $\delta$ of cofinality $\nu$. 
+\end{definition}
+\begin{definition}
+	For limit ordinals $\delta$, $S$ is \emph{stationary in $\delta$} iff $S \subseteq \delta$ and $S\cap C \neq \emptyset$ for any $C$ closed unbounded in $\delta$. 
+\end{definition}
+\begin{definition}
+	If $\langle X_\alpha \mid \alpha < \delta \rangle \in \prescript{\delta}{} {\mathcal{P}(\delta)}$, then its diagonal intersection is $\{ \xi < \delta \mid \xi \in \bigcap_{\alpha<\xi} X_\alpha \}$, denoted $\triangle_{\alpha < \delta} X_\alpha$.
+\end{definition}
+
+\begin{definition}
+	For $X\subseteq \text{On}$ and $f: X \to \text{On}$, $f$ is \emph{regressive} iff $f(\alpha) < \alpha$ for every $\alpha \in X - \{\emptyset \}$.
+\end{definition}
+
+\begin{proposition}
+	Suppose that $\lambda > \omega$ is regular. \par
+	(a) If something \par
+	(b) fkflkadsl;
+\end{proposition}
+
+
 
 \end{document}
