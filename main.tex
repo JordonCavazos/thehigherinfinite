@@ -128,7 +128,7 @@
 \begin{definition}
 	$C$ is \emph{closed unbounded in $\delta$} iff $C$ is an unbounded subset of $\delta$ containing all its limit points less than $\delta$. 
 \end{definition}
-These sets are also called \emph{club} sets. Here $C$ is unbounded iff for all $x\in \delta$ there exists $y \in C$ such that $x<y$ (the alternative would have $x\leq y$). This definition of unbounded implies that $\delta$ must be infinite for club sets to exist.
+These sets are also called \emph{club} sets. Here $C$ is unbounded in $\delta$ iff for all $x\in \delta$ there exists $y \in C$ such that $x\leq y$ (the alternative would have $x<y$). Equivalently, $\sup(C)=\sup(\delta)$. Also equivalently,  $C$ is cofinal in $\delta$.
 \begin{definition}
 	For regular $\nu < \delta$, $C$ is \emph{$\nu$-closed unbounded in $\delta$} iff $C$ is an unbounded subset of $\delta$ containing all its limit points less than $\delta$ of cofinality $\nu$. 
 \end{definition}
@@ -145,10 +145,17 @@ These sets are also called \emph{club} sets. Here $C$ is unbounded iff for all $
 
 \begin{proposition}
 	Suppose that $\lambda > \omega$ is regular. \par
-	(a) If something \par
-	(b) fkflkadsl;
+	(a) If $\gamma <\lambda$ and $\langle C_\alpha \mid \alpha <\gamma \rangle$ is a sequence of sets closed unbounded in $\lambda$, then $\bigcap_{\alpha <\gamma} C_\alpha$ is closed unbounded in $\lambda$. \par
+	(b) If  $\langle C_\alpha \mid \alpha <\lambda \rangle$ is a sequence of sets closed unbounded in $\lambda$, then its diagonal intersection $\triangle_{\alpha < \lambda}C_\alpha$ is closed unbounded in $\lambda$. \par
+	(c) \emph{(Fodor)} If $S$ is stationary in $\lambda$ and $f:S\to\lambda$ is regressive, then there is an $\alpha<\lambda$ such that $f^{-1}(\{\alpha\})$ is stationary in $\lambda$. \par
+	(d) If $\nu<\lambda$ is regular, $S\subseteq\{\xi<\lambda\mid\operatorname{cf}(\xi)=\nu\}$ is stationary in $\lambda$, and $C$ is $\nu$-closed unbounded in $\lambda$, then $S\cap C \neq\emptyset$.
 \end{proposition}
 
+\begin{proof}
+(a) Let $C=\bigcap_{\alpha <\gamma} C_\alpha$. First, we show $C$ is closed. Notice for all sets $X$ and ordinals $\beta$, $\sup(\beta\cap X)\leq \beta$. Suppose $\sup(\delta\cap C)=\bigcup\delta\cap C=\delta$. Then for all $\alpha<\gamma$, $(\delta\cap C)\subseteq (\delta\cap C_\alpha)$. Thus $\delta=\sup(\delta\cap C)\leq\sup(\delta\cap C_\alpha)\leq \delta$. Hence $\sup(\delta\cap C_\alpha)=\delta$. Hence $\delta$ is a limit point and since each $C_\alpha$ is closed, $\delta \in C_\alpha$ for all $\alpha<\gamma$. Thus $\delta \in C$. Hence $C$ is closed. \par
+Now we show $C$ is unbounded. Fix $\beta<\lambda$. Define $b_0=\beta$. Given $b_n<\lambda$ for $n<\omega$, for each $\alpha$ choose $b_{\alpha,n}\in C_\alpha$ such that $b_{\alpha,n} \geq b_n$. Define $b_{n+1}=\sup\{b_{\alpha,n} \mid \alpha<\gamma\}$. Since $\lambda$ is regular and $\gamma<\lambda$, $b_{n+1}<\lambda$. Thus, by unboundedness of each $C_\alpha$, we can define the sequence $\{b_n \mid n<\omega\}$. For each $\alpha$, $b_0\leq b_{\alpha,0}\leq b_1 \leq b_{\alpha,1} \leq \cdots$, thus $\delta=\sup\{b_n \mid n<\omega\}=\sup\{b_{\alpha,n} \mid n<\omega\}$. Furthermore, since $\lambda > \omega$ regular, $\delta < \lambda$. If $\delta = b_{\alpha,n}$ for some $n$ then for all $m+1>n$ and for all $\alpha < \gamma$, $\delta \leq b_{\alpha,m}\leq b_m \leq \delta$. Hence for all $\alpha$, $\delta \in C_\alpha$. Thus we have $\delta \in C$ with $\delta\geq\beta$. Otherwise, $\delta$ is a limit ordinal and, for all $\alpha$, we have $\delta=\sup(\delta\cap \{b_{\alpha,n}\mid n<\omega\})\leq\sup(\delta\cap C_\alpha)\leq\delta$. Hence $\delta$ is a limit point less than $\lambda$ for each $C_\alpha$ and, by closedness, $\delta \in C_\alpha$. Hence we have $\delta \in C$ with $\delta \geq \beta$. Thus $C$ is unbounded. Thus $C$ is closed unbounded in $\lambda$.  \par 
+(b) 
+\end{proof}
 
 
 \end{document}
